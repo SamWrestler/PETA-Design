@@ -1,0 +1,111 @@
+/**
+*
+*	Name:			IRANSansX Fonts
+*	Version:			1.0
+*	Author:			Moslem Ebrahimi (moslemebrahimi.com)
+*	Created on:		Apr 22, 2021
+*	Updated on:		Apr 22, 2021
+*	Website:			http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+فونتایران سنس Xا یک نرم افزار مالکیتی محسوب می شود. جهت آگاهی از قوانین استفاده از این فونت ها لطفا به وب سایت (فونت ایران دات کام) مراجعه نمایید
+--------------------------------------------------------------------------------------
+IRANSansX Fonts are considered a proprietary software. To gain information about the laws regarding the use of these Fonts, please visit www.fontiran.com 
+--------------------------------------------------------------------------------------
+This set of Fonts are used in this project under the license: (.....)
+------------------------------------------------------------------------------------- Fonts-
+*	
+**/
+
+
+@font-face {
+	font-family: iransans;
+	font-style: normal;
+	font-weight: 100;
+	src:
+		url('../Fonts/IRANSans/woff2/IRANSansX-Thin.woff2') format('woff2') ,
+		url('../Fonts/woff/IRANSans/IRANSansX-Thin.woff') format('woff'),   
+		url('../Fonts/ttf/IRANSans/IRANSansX-Thin.ttf') format('truetype');	
+}
+
+@font-face {
+	font-family: iransans;
+	font-style: normal;
+	font-weight: 200;
+	src: 
+		url('../Fonts/IRANSans/woff2/IRANSansX-UltrIRANSansght.woff2') format('woff2') ,
+		url('../Fonts/woff/IRANSans/IRANSansX-UltrIRANSansght.woff') format('woff'),   
+		url('../Fonts/ttf/IRANSans/IRANSansX-UltrIRANSansght.ttf') format('truetype');		
+}
+
+@font-face {
+	font-family: iransans;
+	font-style: normal;
+	font-weight: 300;
+	src: 
+		url('../Fonts/IRANSans/woff2/IRANSansX-Light.woff2') format('woff2') ,
+		url('../Fonts/woff/IRANSans/IRANSansX-Light.woff') format('woff'),   
+		url('../Fonts/ttf/IRANSans/IRANSansX-Light.ttf') format('truetype');			 
+}
+
+@font-face {
+	font-family: iransans;
+	font-style: normal;
+	font-weight: 500;
+	src: 
+	url('../Fonts/IRANSans/woff2/IRANSansX-Medium.woff2') format('woff2') ,
+	url('../Fonts/woff/IRANSans/IRANSansX-Medium.woff') format('woff'),   
+	url('../Fonts/ttf/IRANSans/IRANSansX-Medium.ttf') format('truetype');			 
+}
+
+@font-face {
+	font-family: iransans;
+	font-style: normal;
+	font-weight: 600;
+	src: 
+		url('../Fonts/IRANSans/woff2/IRANSansX-DemiBold.woff2') format('woff2') ,
+		url('../Fonts/woff/IRANSans/IRANSansX-DemiBold.woff') format('woff'),   
+		url('../Fonts/ttf/IRANSans/IRANSansX-DemiBold.ttf') format('truetype');		 
+}
+
+@font-face {
+	font-family: iransans;
+	font-style: normal;
+	font-weight: 800;
+	src: 
+	url('../Fonts/IRANSans/woff2/IRANSansX-ExtraBold.woff2') format('woff2') ,
+	url('../Fonts/woff/IRANSans/IRANSansX-ExtraBold.woff') format('woff'),   
+	url('../Fonts/ttf/IRANSans/IRANSansX-ExtraBold.ttf') format('truetype');		 
+}
+
+@font-face {
+	font-family: iransans;
+	font-style: normal;
+	font-weight: 900;
+	src: 
+	url('../Fonts/IRANSans/woff2/IRANSansX-Black.woff2') format('woff2') ,
+	url('../Fonts/woff/IRANSans/IRANSansX-Black.woff') format('woff'),   
+	url('../Fonts/ttf/IRANSans/IRANSansX-Black.ttf') format('truetype');			 
+}
+
+@font-face {
+	font-family: iransans;
+	font-style: normal;
+	font-weight: bold;
+	src: 
+	url('../Fonts/IRANSans/woff2/IRANSansX-Bold.woff2') format('woff2') ,
+	url('../Fonts/woff/IRANSans/IRANSansX-Bold.woff') format('woff'),   
+	url('../Fonts/ttf/IRANSans/IRANSansX-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: iransans;
+	font-style: normal;
+	font-weight: normal;
+	src: 
+	url('../Fonts/IRANSans/woff2/IRANSansX-Regular.woff2') format('woff2'),
+	url('../Fonts/woff/IRANSans/IRANSansX-Regular.woff') format('woff'),   
+	url('../Fonts/ttf/IRANSans/IRANSansX-Regular.ttf') format('truetype');
+}
+
+
