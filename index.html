@@ -7,15 +7,24 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/iransans.css">
     <link rel="stylesheet" href="css/rubik.css">
+    <link rel="stylesheet" href="Fonts/FontAwesome/css/all.css">
     <title>پترو انرژی تجارت آسمان</title>
 </head>
 <body>
     <header id="header">
-        <article class="brand container">
+        <article class="brand">
             <img src="images/Peta Logo Enhanced.png" alt="PETA - logo" class="brand__logo">
             <h1 class="brand__title">پترو انرژی تجارت آسمان</h1>
             <p class="brand__description">توانایی ما، انرژی جهانی شما</p>
             <button class="btn">وقت مشاوره</button>
+        </article>
+        <article class="info">
+            <h2 class="info__title">پترو انرژی تجارت آسمان</h2>
+            <p class="info__description">
+                شرکت پترو انرژی تجارت آسمان یکی از برجسته‌ترین نام‌های صنعت نفت و گاز در ایران است که به تجارت و صادرات فراورده‌های نفتی در سطح جهانی مشغول می‌باشد. با بیش از دو دهه تجربه در این صنعت و تخصص‌های فنی و مهندسی برجسته، ما به عنوان یک شریک استراتژیک قابل اعتماد در زمینه تأمین و صادرات محصولات نفتی شناخته می‌شویم.
+            </p>
+            <button class="btn">وقت مشاوره</button>
+
         </article>
     </header>
     <section id="first" class="container">
@@ -32,38 +41,75 @@
         </article>
         <article class="promo">
             <img src="images/svgs/export.svg" alt="">
-            <h2>فراورده‌های نفتی متنوع</h2>
-            <p>تولید و تأمین مجموعه‌گسترده‌ای از محصولات نفتی از جمله نفت خام، گازوئیل، بنزین، مازوت، لوازم جانبی صنعت نفت، و محصولات پتروشیمی.</p>
+            <h2>صادرات بین‌المللی</h2>
+            <p>همکاری با مشتریان و تأمین‌کنندگان جهانی و صادرات محصولات با کیفیت بالا و قیمت رقابتی.</p>
         </article>
         <article class="promo">
             <img src="images/svgs/consult.svg" alt="">
-            <h2>فراورده‌های نفتی متنوع</h2>
-            <p>تولید و تأمین مجموعه‌گسترده‌ای از محصولات نفتی از جمله نفت خام، گازوئیل، بنزین، مازوت، لوازم جانبی صنعت نفت، و محصولات پتروشیمی.</p>
+            <h2>مشاوره و خدمات فنی</h2>
+            <p>تیم‌های مهندسی و تخصصی برای ارائه مشاوره‌های فنی و راه‌حل‌های بهینه</p>
         </article>
         <article class="promo">
             <img src="images/svgs/nature.svg" alt="">
-            <h2>فراورده‌های نفتی متنوع</h2>
-            <p>تولید و تأمین مجموعه‌گسترده‌ای از محصولات نفتی از جمله نفت خام، گازوئیل، بنزین، مازوت، لوازم جانبی صنعت نفت، و محصولات پتروشیمی.</p>
+            <h2>پایداری محیطی</h2>
+            <p>تعهد به پایداری محیطی و بهبودهای مستمر در فرآیندهای محیطی</p>
         </article>
     </section>
-    <section id="second" class="container">
-        <form action="#" method="#" class="form">
+    <section id="second" >
+        <form action="#" method="#" class="form container" >
             <h2 class="form__title">وقت مشاوره</h2>
             <div class="form__input">
                 <label for="email">
                     ایمیل خود را وارد کنید
                 </label>
-                <input type="email" id="email" class="form__email">
+                <input type="email" id="email" class="form__email" placeholder="test@gmail.com"> 
+            <i class="fa-solid fa-at"></i>
             </div>
             <div class="form__input">
                 <label for="number">
                     شماره تماس خود را وارد کنید
                 </label>
-                <input type="number" id="number" class="form__number">
+                <input type="text" id="number" class="form__number" placeholder="0912999999">
+                <i class="fa-solid fa-phone"></i>
             </div>
-            <button class="btn form__btn"></button>
+            <button class="btn form__btn">ثبت اطلاعات</button>
             <h2 class="form__notice">همکاران ما در اسرع وقت با شما تماس خواهند گرفت</h2>
         </form>
     </section>
+    <footer class="container">
+        <div class="footer__row">
+            <h2 class="footer__row__title">
+                آدرس:
+            </h2>
+            <p class="footer__row__description">
+                خیابان ولنجک، نبش کوچه دکتر مصاحب (سوم شرقی)، پلاک ۱۲، واحد ۱
+            </p>
+            <a href="" class="img"><img class="img" src="images/location.png" alt="Location"></a>
+        </div>
+        <div class="area">
+            <div class="footer__row">
+                <h2 class="footer__row__title">
+                    شماره:
+                </h2>
+                <div class="numbers">
+                    <p class="footer__row__description">  
+                        ۰۲۱ - ۲۲۱۸۱۰۱۳
+                    </p>
+                    <p class="footer__row__description">  
+                        ۰۲۱ - ۲۲۱۸۱۰۱۴
+                    </p>
+                </div>
+            </div>
+            <div class="footer__row">
+                <h2 class="footer__row__title">
+                    ایمیل:
+                </h2>
+                <a href="" class="footer__row__description" id="email__link">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <p>Peta@clickmarines.com</p>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
