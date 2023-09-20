@@ -15,6 +15,9 @@
 html {
     font-family: rubik, iransans;
 }
+body {
+    overflow-x: hidden;
+}
 .container {
     width: 100vw;
     margin-right: auto;
@@ -357,7 +360,9 @@ footer img {
     header .info button{
         display: flex;
     }
-    
+    #first article {
+        padding: 0 !important;
+    }
     #first {
         grid-template-columns: repeat(4,1fr);
         padding: 4.219rem;
