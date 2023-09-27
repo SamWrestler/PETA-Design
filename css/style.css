@@ -7,13 +7,16 @@
     --yellow-color : #F1C40F;
     --dark-color : #333333;
     --white-color : #ffffff;
-    --light-white : rgba(255,255,255,0.8)
+    --light-white : rgba(255,255,255,0.8);
+    --backgroud-color: #F2F2F2;
+    --input-color: #D9D9D9;
 }
 * {
     box-sizing: border-box;
 }
 html {
     font-family: rubik, iransans;
+    background-color: var(--backgroud-color);
 }
 body {
     overflow-x: hidden;
@@ -261,7 +264,117 @@ footer img {
     justify-content: flex-end;
     gap: 0.313rem;
 }
+.hidden {
+    display: none !important;
+}
 
+/* Admin Panel */
+
+#admin__header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-color) !important;
+    background-image: none;
+    color: var(--light-white);
+}
+#admin__header .header__top {
+    direction: rtl;
+    padding: 0.875rem 0.9375rem;
+    font-size: 1.125rem;
+}
+#admin__header .header__topNavigation {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.8125rem 0;
+}
+
+#admin__header .header__topNavigation .nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+#main {
+    padding-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    direction: rtl;
+}
+#main .main__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    
+}
+#main .main__title hr {
+    width: 100%;
+}
+
+#main .main__section {
+    background-color: var(--white-color);
+    padding: 1.125rem 0.875rem 0;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#main .main__section .main__section__title {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 1rem;
+}
+#main .main__section .main__section__content {
+    padding: 1rem 0 0;
+}
+.notice__container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    color: var(--green-color);
+    list-style-type: disc;
+    font-size: 0.75rem;
+    list-style-position: inside;
+}
+.main__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+.main__form .main__form__input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: rubik,iransans !important;
+    padding: 1rem 0;
+}
+.main__form .main__form__input label {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+.main__form .main__form__input input {
+    padding: 0.9rem 0.75rem;
+    border-radius: 0.625rem;
+    border: none;
+    background-color: var(--input-color);
+    font-size: 0.9375rem;
+    font-family: rubik,iransans !important;
+
+}
+.main__form img {
+    margin: 0.5rem auto 0;
+    border: 0 !important;
+    outline: 0 !important;
+}
+.main__form button {
+    width: 40%;
+    font-size: 0.8rem;
+    padding: 0.8rem;
+    margin: 1rem auto;
+}
+/* Admin Panel */
 
 @media (min-width:475px) {
     .promo p {
