@@ -2,6 +2,7 @@
     --green-color : #27AE60;
     --dark-green-color : #239854;
     --light-dark-color : rgba(51,51,51,0.7);
+    --nothing-dark-color : rgba(51,51,51,0.4);
     --red-color : #E74C3C;
     --orange-color : #E67E22;
     --yellow-color : #F1C40F;
@@ -284,6 +285,7 @@ footer img {
 }
 #admin__header .header__topNavigation {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-around;
     padding: 0.8125rem 0;
 }
@@ -293,6 +295,7 @@ footer img {
     flex-direction: column;
     align-items: center;
     gap: 0.25rem;
+    cursor: pointer;
 }
 
 #main {
@@ -302,19 +305,19 @@ footer img {
     direction: rtl;
     gap: 0.625rem;
 }
-#main .main__title {
+.main__title {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
     
 }
-#main .main__title hr {
+.main__title hr {
     width: 100%;
 }
 
 #main .main__section {
     background-color: var(--white-color);
-    padding: 1.125rem 0.875rem 0;
+    padding: 1.125rem 0.875rem ;
     border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
@@ -328,6 +331,7 @@ footer img {
     display: flex;
     gap: 0.8rem;
     font-size: 1rem;
+    cursor: pointer;
 }
 #main .main__section .main__section__content {
     padding: 1rem 0 0;
@@ -402,6 +406,74 @@ footer img {
     border-radius: .625rem;
     padding: 0.9rem 0.9rem;
 
+}
+
+.sections__container {
+    display: flex;
+    position: absolute;
+    /* age -100% beshe safe asli miad age 0 reserve */
+    left: 0px;
+}
+#reserve {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    direction: rtl;
+}
+.reserve__card {
+    background-color: var(--white-color);
+    border-radius: .625rem;
+    padding: .875rem 1.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+}
+.reserve__card .reserve__card__row {
+    display: flex;
+    justify-content: space-between;
+}
+.reserve__card .reserve__card__row__buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: .625rem;
+}
+.reserve__card .reserve__card__row__buttons button {
+    border-radius: 50%;
+    outline: none;
+    border: none;
+
+}
+.reserve__card .reserve__card__row__buttons button i{
+    font-size: 1rem;
+    color: white;
+    padding: 0.6rem;
+    cursor: pointer;
+}
+.nothing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .625rem;
+}
+.nothing i {
+    font-size: 3rem;
+    color: var(--nothing-dark-color);
+}
+.nothing h2 {
+    font-size: 1.3125rem;
+    color: var(--nothing-dark-color);
+    font-weight: 300;
+}
+.green {
+    background-color: var(--dark-green-color);
+}
+.red {
+    background-color: var(--red-color);
+}
+.yellow {
+    background-color: var(--yellow-color);
 }
 /* Admin Panel */
 

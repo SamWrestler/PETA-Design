@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/iransans.css">
     <link rel="stylesheet" href="css/rubik.css">
     <link rel="stylesheet" href="Fonts/FontAwesome/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js" defer></script>
+    <script src="js/app.js" defer></script>
     <title>پنل مدیریت</title>
 </head>
 <body>
@@ -16,240 +19,308 @@
             <h2>پنل مدیریت</h2>
         </div>
         <nav class="header__topNavigation">
-            <div class="nav__item">
+            <div class="nav__item" id="reserve__tab">
                 <i class="fa-regular fa-list-dropdown"></i>
                 <h2>رزرو ها</h2>
             </div>
-            <div class="nav__item">
+            <div class="nav__item" id="mainpage__tab">
                 <i class="fa-solid fa-pen-to-square"></i>
                 <h2>صفحه اصلی</h2>
             </div>
         </nav>
     </header>
-    <section id="main" class="container">
-        <div class="main__title">
-            <h2>ویرایش صفحه اصلی</h2>
-            <hr>
+        <div class="sections__container">
+            <section id="main" class="container hidden">
+                <div class="main__title">
+                    <h2>ویرایش صفحه اصلی</h2>
+                    <hr>
+                </div>
+                <article class="main__section">
+                    <div class="main__section__title">
+                        <i class="fa-light fa-plus"></i>
+                        <i class="fa-light fa-minus hidden"></i>
+                        <h2>لوگو و توضیحات</h2>
+                    </div>
+                    <div class="main__section__content hidden">
+                        <div class="notice__container">
+                            <ul>
+                                <li>تعداد کاراکتر هارا بنابر تعداد تعیین شده وارد کنید (پیشنهادی)</li>
+                                <li>ابعاد لوگو ۴۹۲ در ۶۶۴ پیکسل (پیشنهادی)</li>
+                            </ul>
+                        </div>
+                        <form action="#" class="main__form">
+                            <div class="main__form__input">
+                                <label for="peta">
+                                    نام شرکت
+                                </label>
+                                <input type="text" id="name" value="نام شرکت">
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    شعار شرکت
+                                </label>
+                                <input type="text" id="name" value="شعار شرکت">
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    لوگو شرکت
+                                </label>
+                                <input type="file" id="name" accept="image/JPEG" accpet="image/png" value="شعار شرکت">
+                                
+                            </div>
+                            <img src="" alt="" width="121px" height="90px"> 
+                            <button class="btn">ثبت تغییرات</button>
+                        </form>
+                    </div>
+                </article>
+                <article class="main__section">
+                    <div class="main__section__title">
+                        <i class="fa-light fa-plus"></i>
+                        <i class="fa-light fa-minus hidden hidden"></i>
+                        <h2>توضیحات جامع</h2>
+                    </div>
+                    <div class="main__section__content hidden">
+                        
+                        <form action="#" class="main__form">
+                            <div class="main__form__input">
+                                <label for="peta">
+                                    عنوان
+                                </label>
+                                <input type="text" id="name" value="پترو انرژی تجارت آسمان">
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    توضیحات
+                                </label>
+                                <textarea name="info" id="info" cols="30" rows="10">شرکت پترو انرژی تجارت آسمان یکی از برجسته‌ترین نام‌های صنعت نفت و گاز در ایران است که به تجارت و صادرات فراورده‌های نفتی در سطح جهانی مشغول می‌باشد. با بیش از دو دهه تجربه در این صنعت و تخصص‌های فنی و مهندسی برجسته، ما به عنوان یک شریک استراتژیک قابل اعتماد در زمینه تأمین و صادرات محصولات نفتی شناخته می‌شویم.</textarea>
+                            </div>
+                            <button class="btn">ثبت تغییرات</button>
+                        </form>
+                    </div>
+                </article>
+                <article class="main__section">
+                    <div class="main__section__title">
+                        <i class="fa-light fa-plus"></i>
+                        <i class="fa-light fa-minus hidden"></i>
+                        <h2>موارد تبلیغاتی</h2>
+                    </div>
+                    <div class="main__section__content hidden">
+                        <div class="notice__container">
+                            <ul>
+                                <li>عکس ها به فرمت svg و در ابعاد ۹۷ در ۹۷</li>
+                                
+                            </ul>
+                        </div>
+                        <form action="#" class="main__form">
+                            <div class="main__form__input">
+                                <label for="peta">
+                                    عنوان تبلیغ
+                                </label>
+                                <input type="text" id="name" class="red" value="فراورده‌های نفتی متنوع">
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    توضیحات
+                                </label>
+                                <textarea name="info" class="red" id="info" cols="30" rows="10">شرکت پترو انرژی تجارت آسمان یکی از برجسته‌ترین نام‌های صنعت نفت و گاز در ایران است که به تجارت و صادرات فراورده‌های نفتی در سطح جهانی مشغول می‌باشد. با بیش از دو دهه تجربه در این صنعت و تخصص‌های فنی و مهندسی برجسته، ما به عنوان یک شریک استراتژیک قابل اعتماد در زمینه تأمین و صادرات محصولات نفتی شناخته می‌شویم.</textarea>
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    عکس تبلیغ
+                                </label>
+                                <input type="file" id="name" accept="image/JPEG" accpet="image/png" value="شعار شرکت">
+                                
+                            </div>
+                            <img src="" alt="" width="121px" height="90px"> 
+                            <button class="btn">ثبت تغییرات</button>
+                            <hr>
+                        </form>
+                        <form action="#" class="main__form">
+                            <div class="main__form__input">
+                                <label for="peta">
+                                    عنوان تبلیغ
+                                </label>
+                                <input type="text" id="name" class="orange" value="فراورده‌های نفتی متنوع">
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    توضیحات
+                                </label>
+                                <textarea name="info" class="orange" id="info" cols="30" rows="10">شرکت پترو انرژی تجارت آسمان یکی از برجسته‌ترین نام‌های صنعت نفت و گاز در ایران است که به تجارت و صادرات فراورده‌های نفتی در سطح جهانی مشغول می‌باشد. با بیش از دو دهه تجربه در این صنعت و تخصص‌های فنی و مهندسی برجسته، ما به عنوان یک شریک استراتژیک قابل اعتماد در زمینه تأمین و صادرات محصولات نفتی شناخته می‌شویم.</textarea>
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    عکس تبلیغ
+                                </label>
+                                <input type="file" id="name" accept="image/JPEG" accpet="image/png" value="شعار شرکت">
+                                
+                            </div>
+                            <img src="" alt="" width="121px" height="90px"> 
+                            <button class="btn">ثبت تغییرات</button>
+                            <hr>
+                        </form>
+                        <form action="#" class="main__form">
+                            <div class="main__form__input">
+                                <label for="peta">
+                                    عنوان تبلیغ
+                                </label>
+                                <input type="text" id="name" class="yellow" value="فراورده‌های نفتی متنوع">
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    توضیحات
+                                </label>
+                                <textarea name="info" class="yellow" id="info" cols="30" rows="10">شرکت پترو انرژی تجارت آسمان یکی از برجسته‌ترین نام‌های صنعت نفت و گاز در ایران است که به تجارت و صادرات فراورده‌های نفتی در سطح جهانی مشغول می‌باشد. با بیش از دو دهه تجربه در این صنعت و تخصص‌های فنی و مهندسی برجسته، ما به عنوان یک شریک استراتژیک قابل اعتماد در زمینه تأمین و صادرات محصولات نفتی شناخته می‌شویم.</textarea>
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    عکس تبلیغ
+                                </label>
+                                <input type="file" id="name" accept="image/JPEG" accpet="image/png" value="شعار شرکت">
+                                
+                            </div>
+                            <img src="" alt="" width="121px" height="90px"> 
+                            <button class="btn">ثبت تغییرات</button>
+                            <hr>
+                        </form>
+                        <form action="#" class="main__form">
+                            <div class="main__form__input">
+                                <label for="peta">
+                                    عنوان تبلیغ
+                                </label>
+                                <input type="text" id="name" class="green" value="فراورده‌های نفتی متنوع">
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    توضیحات
+                                </label>
+                                <textarea name="info" class="green" id="info" cols="30" rows="10">شرکت پترو انرژی تجارت آسمان یکی از برجسته‌ترین نام‌های صنعت نفت و گاز در ایران است که به تجارت و صادرات فراورده‌های نفتی در سطح جهانی مشغول می‌باشد. با بیش از دو دهه تجربه در این صنعت و تخصص‌های فنی و مهندسی برجسته، ما به عنوان یک شریک استراتژیک قابل اعتماد در زمینه تأمین و صادرات محصولات نفتی شناخته می‌شویم.</textarea>
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    عکس تبلیغ
+                                </label>
+                                <input type="file" id="name" accept="image/JPEG" accpet="image/png" value="شعار شرکت">
+                                
+                            </div>
+                            <img src="" alt="" width="121px" height="90px"> 
+                            <button class="btn">ثبت تغییرات</button>
+                            
+                        </form>
+                    </div>
+                </article>
+                <article class="main__section">
+                    <div class="main__section__title">
+                        <i class="fa-light fa-plus"></i>
+                        <i class="fa-light fa-minus hidden"></i>
+                        <h2>پاورقی</h2>
+                    </div>
+                    <div class="main__section__content hidden">
+                        
+                        <form action="#" class="main__form">
+                            <div class="main__form__input">
+                                <label for="peta">
+                                    شماره های شرکت
+                                </label>
+                                <div class="phone">
+                                    <input type="text" id="phone" value="22181013">
+                                    <i class="fa-light fa-plus" id="add__phone"></i>
+                                </div>
+                                <div class="phone">
+                                    <input type="text" id="phone" value="22181014">
+                                    <i class="fa-light fa-minus" id="remove__phone"></i>
+
+                                </div>
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    ایمیل شرکت
+                                </label>
+                                <input type="email" id="name" value="test@gmail.com">
+                            </div>
+                        
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    آدرس شرکت
+                                </label>
+                                <textarea name="info" id="info" cols="30" rows="6">خیابان ولنجک، نبش کوچه دکتر مصاحب (سوم شرقی)، پلاک ۱۲، واحد ۱</textarea>
+                            </div>
+                            <div class="main__form__input">
+                                <label for="peta__banner">
+                                    موقعیت جغرافیایی
+                                </label>
+                                <input type="text" id="name" value="">
+                            </div>
+                            <button class="btn">ثبت تغییرات</button>
+                        </form>
+                    </div>
+                </article>
+            </section>
+            <section id="reserve" class="container">
+                <div class="main__title">
+                    <h2>لیست رزرو ها</h2>
+                    <hr>
+                </div>
+                <!-- You Can Hide Elements by hidden Class  -->
+                <!-- You Can Hide Elements by hidden Class  -->
+                <!-- You Can Hide Elements by hidden Class  -->
+                <!-- You Can Hide Elements by hidden Class  -->
+                <!-- You Can Hide Elements by hidden Class  -->
+                <article class="reserve__card">
+                    <div class="reserve__card__row">
+                        <h2 class="reserve__subject">نام شرکت: </h2>
+                        <h2 class="reserve__info">پترو انرژی تجارت آسمان</h2>
+                    </div>
+                    <div class="reserve__card__row">
+                        <h2 class="reserve__subject">ایمیل شرکت: </h2>
+                        <h2 class="reserve__info">test@gmail.com</h2>
+                    </div>
+                    <div class="reserve__card__row">
+                        <h2 class="reserve__subject">شماره شرکت: </h2>
+                        <h2 class="reserve__info">09352214805</h2>
+                    </div>
+                    <div class="reserve__card__row__buttons">
+                        <button class="reserve__call green">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        <button class="reserve__email yellow">
+                            <i class="fa-solid fa-envelope"></i>
+                        </button>
+                        <button class="reserve__delete red">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </article>
+                <article class="reserve__card">
+                    <div class="reserve__card__row">
+                        <h2 class="reserve__subject">نام شرکت: </h2>
+                        <h2 class="reserve__info">پترو انرژی تجارت آسمان</h2>
+                    </div>
+                    <div class="reserve__card__row">
+                        <h2 class="reserve__subject">ایمیل شرکت: </h2>
+                        <h2 class="reserve__info">test@gmail.com</h2>
+                    </div>
+                    <div class="reserve__card__row">
+                        <h2 class="reserve__subject">شماره شرکت: </h2>
+                        <h2 class="reserve__info">09352214805</h2>
+                    </div>
+                    <div class="reserve__card__row__buttons">
+                        <button class="reserve__call green">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        <button class="reserve__email yellow">
+                            <i class="fa-solid fa-envelope"></i>
+                        </button>
+                        <button class="reserve__delete red">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </article>
+                <div class="nothing">
+                    <i class="fa-thin fa-empty-set"></i>
+                    <h2>رزروی برای نمایش وجود ندارد</h2>
+                </div>
+            </section>
         </div>
-        <article class="main__section">
-            <div class="main__section__title">
-                <i class="fa-light fa-plus"></i>
-                <i class="fa-light fa-minus hidden"></i>
-                <h2>لوگو و توضیحات</h2>
-            </div>
-            <div class="main__section__content">
-                <div class="notice__container">
-                    <ul>
-                        <li>تعداد کاراکتر هارا بنابر تعداد تعیین شده وارد کنید (پیشنهادی)</li>
-                        <li>ابعاد لوگو ۴۹۲ در ۶۶۴ پیکسل (پیشنهادی)</li>
-                    </ul>
-                </div>
-                <form action="#" class="main__form">
-                    <div class="main__form__input">
-                        <label for="peta">
-                            نام شرکت
-                        </label>
-                        <input type="text" id="name" value="نام شرکت">
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            شعار شرکت
-                        </label>
-                        <input type="text" id="name" value="شعار شرکت">
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            لوگو شرکت
-                        </label>
-                        <input type="file" id="name" accept="image/JPEG" accpet="image/png" value="شعار شرکت">
-                        
-                    </div>
-                    <img src="" alt="" width="121px" height="90px"> 
-                    <button class="btn">ثبت تغییرات</button>
-                </form>
-            </div>
-        </article>
-        <article class="main__section">
-            <div class="main__section__title">
-                <i class="fa-light fa-plus"></i>
-                <i class="fa-light fa-minus hidden"></i>
-                <h2>توضیحات جامع</h2>
-            </div>
-            <div class="main__section__content">
-                
-                <form action="#" class="main__form">
-                    <div class="main__form__input">
-                        <label for="peta">
-                            عنوان
-                        </label>
-                        <input type="text" id="name" value="پترو انرژی تجارت آسمان">
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            توضیحات
-                        </label>
-                        <textarea name="info" id="info" cols="30" rows="10">شرکت پترو انرژی تجارت آسمان یکی از برجسته‌ترین نام‌های صنعت نفت و گاز در ایران است که به تجارت و صادرات فراورده‌های نفتی در سطح جهانی مشغول می‌باشد. با بیش از دو دهه تجربه در این صنعت و تخصص‌های فنی و مهندسی برجسته، ما به عنوان یک شریک استراتژیک قابل اعتماد در زمینه تأمین و صادرات محصولات نفتی شناخته می‌شویم.</textarea>
-                    </div>
-                    <button class="btn">ثبت تغییرات</button>
-                </form>
-            </div>
-        </article>
-        <article class="main__section">
-            <div class="main__section__title">
-                <i class="fa-light fa-plus"></i>
-                <i class="fa-light fa-minus hidden"></i>
-                <h2>موارد تبلیغاتی</h2>
-            </div>
-            <div class="main__section__content">
-                <div class="notice__container">
-                    <ul>
-                        <li>عکس ها به فرمت svg و در ابعاد ۹۷ در ۹۷</li>
-                        
-                    </ul>
-                </div>
-                <form action="#" class="main__form">
-                    <div class="main__form__input">
-                        <label for="peta">
-                            عنوان تبلیغ
-                        </label>
-                        <input type="text" id="name" class="red" value="فراورده‌های نفتی متنوع">
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            توضیحات
-                        </label>
-                        <textarea name="info" class="red" id="info" cols="30" rows="10">شرکت پترو انرژی تجارت آسمان یکی از برجسته‌ترین نام‌های صنعت نفت و گاز در ایران است که به تجارت و صادرات فراورده‌های نفتی در سطح جهانی مشغول می‌باشد. با بیش از دو دهه تجربه در این صنعت و تخصص‌های فنی و مهندسی برجسته، ما به عنوان یک شریک استراتژیک قابل اعتماد در زمینه تأمین و صادرات محصولات نفتی شناخته می‌شویم.</textarea>
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            عکس تبلیغ
-                        </label>
-                        <input type="file" id="name" accept="image/JPEG" accpet="image/png" value="شعار شرکت">
-                        
-                    </div>
-                    <img src="" alt="" width="121px" height="90px"> 
-                    <button class="btn">ثبت تغییرات</button>
-                    <hr>
-                </form>
-                <form action="#" class="main__form">
-                    <div class="main__form__input">
-                        <label for="peta">
-                            عنوان تبلیغ
-                        </label>
-                        <input type="text" id="name" class="orange" value="فراورده‌های نفتی متنوع">
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            توضیحات
-                        </label>
-                        <textarea name="info" class="orange" id="info" cols="30" rows="10">شرکت پترو انرژی تجارت آسمان یکی از برجسته‌ترین نام‌های صنعت نفت و گاز در ایران است که به تجارت و صادرات فراورده‌های نفتی در سطح جهانی مشغول می‌باشد. با بیش از دو دهه تجربه در این صنعت و تخصص‌های فنی و مهندسی برجسته، ما به عنوان یک شریک استراتژیک قابل اعتماد در زمینه تأمین و صادرات محصولات نفتی شناخته می‌شویم.</textarea>
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            عکس تبلیغ
-                        </label>
-                        <input type="file" id="name" accept="image/JPEG" accpet="image/png" value="شعار شرکت">
-                        
-                    </div>
-                    <img src="" alt="" width="121px" height="90px"> 
-                    <button class="btn">ثبت تغییرات</button>
-                    <hr>
-                </form>
-                <form action="#" class="main__form">
-                    <div class="main__form__input">
-                        <label for="peta">
-                            عنوان تبلیغ
-                        </label>
-                        <input type="text" id="name" class="yellow" value="فراورده‌های نفتی متنوع">
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            توضیحات
-                        </label>
-                        <textarea name="info" class="yellow" id="info" cols="30" rows="10">شرکت پترو انرژی تجارت آسمان یکی از برجسته‌ترین نام‌های صنعت نفت و گاز در ایران است که به تجارت و صادرات فراورده‌های نفتی در سطح جهانی مشغول می‌باشد. با بیش از دو دهه تجربه در این صنعت و تخصص‌های فنی و مهندسی برجسته، ما به عنوان یک شریک استراتژیک قابل اعتماد در زمینه تأمین و صادرات محصولات نفتی شناخته می‌شویم.</textarea>
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            عکس تبلیغ
-                        </label>
-                        <input type="file" id="name" accept="image/JPEG" accpet="image/png" value="شعار شرکت">
-                        
-                    </div>
-                    <img src="" alt="" width="121px" height="90px"> 
-                    <button class="btn">ثبت تغییرات</button>
-                    <hr>
-                </form>
-                <form action="#" class="main__form">
-                    <div class="main__form__input">
-                        <label for="peta">
-                            عنوان تبلیغ
-                        </label>
-                        <input type="text" id="name" class="green" value="فراورده‌های نفتی متنوع">
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            توضیحات
-                        </label>
-                        <textarea name="info" class="green" id="info" cols="30" rows="10">شرکت پترو انرژی تجارت آسمان یکی از برجسته‌ترین نام‌های صنعت نفت و گاز در ایران است که به تجارت و صادرات فراورده‌های نفتی در سطح جهانی مشغول می‌باشد. با بیش از دو دهه تجربه در این صنعت و تخصص‌های فنی و مهندسی برجسته، ما به عنوان یک شریک استراتژیک قابل اعتماد در زمینه تأمین و صادرات محصولات نفتی شناخته می‌شویم.</textarea>
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            عکس تبلیغ
-                        </label>
-                        <input type="file" id="name" accept="image/JPEG" accpet="image/png" value="شعار شرکت">
-                        
-                    </div>
-                    <img src="" alt="" width="121px" height="90px"> 
-                    <button class="btn">ثبت تغییرات</button>
-                    
-                </form>
-            </div>
-        </article>
-        <article class="main__section">
-            <div class="main__section__title">
-                <i class="fa-light fa-plus"></i>
-                <i class="fa-light fa-minus hidden"></i>
-                <h2>پاورقی</h2>
-            </div>
-            <div class="main__section__content">
-                
-                <form action="#" class="main__form">
-                    <div class="main__form__input">
-                        <label for="peta">
-                            شماره های شرکت
-                        </label>
-                        <div class="phone">
-                            <input type="text" id="phone" value="22181013">
-                            <i class="fa-sharp fa-regular fa-plus" id="add__phone"></i>
-                        </div>
-                        <div class="phone">
-                            <input type="text" id="phone" value="22181014">
-                            <i class="fa-sharp fa-regular fa-minus" id="remove__phone"></i>
-                        </div>
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            ایمیل شرکت
-                        </label>
-                        <input type="email" id="name" value="test@gmail.com">
-                    </div>
-                
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            آدرس شرکت
-                        </label>
-                        <textarea name="info" id="info" cols="30" rows="6">خیابان ولنجک، نبش کوچه دکتر مصاحب (سوم شرقی)، پلاک ۱۲، واحد ۱</textarea>
-                    </div>
-                    <div class="main__form__input">
-                        <label for="peta__banner">
-                            موقعیت جغرافیایی
-                        </label>
-                        <input type="text" id="name" value="">
-                    </div>
-                    <button class="btn">ثبت تغییرات</button>
-                </form>
-            </div>
-        </article>
-    </section>
 </body>
 </html>
