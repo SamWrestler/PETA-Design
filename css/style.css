@@ -336,6 +336,11 @@ footer img {
 #main .main__section .main__section__content {
     padding: 1rem 0 0;
 }
+.main__section__container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
 .notice__container ul{
     display: flex;
     flex-direction: column;
@@ -540,7 +545,24 @@ footer img {
     #first .info {
         display: none;
     }
-    
+
+    /* Admin Panel */
+    #main .main__section {
+        padding: 2rem 0.825rem !important;
+    }
+    .main__section__title {
+        font-size: 1rem !important;
+
+    }
+    .main__section__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main__form {
+        width: 80%;
+    }
+    /* Admin panel */
 }
 
 @media (min-width:1024px){
@@ -615,4 +637,16 @@ footer img {
     footer .footer__row a {
         width: 75%;
     }
+
+    /* Admin Panel */
+    .main__section__container {
+        place-items: center;
+    }
+    .main__section {
+        width: 70%;
+    }
+    .main__form {
+        width: 50%;
+    }
+    /* Admin Panel */
 }
